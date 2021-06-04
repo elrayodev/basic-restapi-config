@@ -16,15 +16,10 @@ const usersPut = ( req, res ) => {
 
     const { id } = req.params.id;
 
-    if( res.status(400) ) {
-        res.json({
-            msg: 'CLIENT ERRROR'
-        });
-    } else {
-        res.json({
-            msg: 'put API - controller'
-        });
-    }
+    res.json({
+        msg: 'put API - controller',
+        id
+    });
 
 };
 
@@ -36,6 +31,7 @@ const usersPost = ( req, res ) => {
         msg: 'post API - controller',
         body
     });
+
 };
 
 const usersDelete = ( req, res ) => {
